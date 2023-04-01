@@ -23,7 +23,8 @@ max_days=20
 total_working_hrs=0
 total_working_days=0
 total_wage=0
-echo "daily wage    total wage"
+echo "Day       Daily wage    Total wage"
+echo 
 while(( total_working_hrs < max_hrs && total_working_days < max_days ))
 do
     (( total_working_days++ ))
@@ -33,5 +34,5 @@ do
     daily_wage=$(( no_of_hrs_per_day * wage_per_hr ))
     (( total_wage += daily_wage ))
     wage[$total_wage]=$daily_wage
-    echo "$daily_wage           $total_wage"
+    echo "Day${total_working_days}          $daily_wage           $total_wage"
 done
